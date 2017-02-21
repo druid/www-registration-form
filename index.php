@@ -12,12 +12,12 @@
   See the License for the specific language governing permissions and
   limitations under the License
 -->
-<html lang="en">
+<html lang="et">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>Tor hidden service</title>
+    <title>Tor varjatud teenus</title>
 
     <link rel="shortcut icon" href="images/favicon.png">
 
@@ -38,9 +38,9 @@
         <div class="demo-container mdl-grid">
           <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
           <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
-            <h3>Tor hidden service</h3>
+            <h3>Tor varjatud teenus</h3>
               <p>
-                Welcome! You have successfully found the Tor hidden service for the Information Security course.
+                Tere! Oled leidnud infoturbe kursuse raames loodud Tor varjatud teenuse.                
               </p>
 <?php
   session_start();
@@ -51,7 +51,7 @@
   if (array_key_exists("HTTP_X_TOR2WEB",$s)
       || array_key_exists("HTTP_X_FORWARDED_PROTO",$s)
       || array_key_exists("HTTP_X_FORWARDED_HOST",$s)) {
-    $_SESSION['error-message'] = 'The site is not available through Tor2Web proxy!';
+    $_SESSION['error-message'] = 'See leht ei ole kättesaadav läbi Tor2Web proxy!';
   }
 
   // Parse submission
@@ -69,7 +69,7 @@
   if (isset($_SESSION['ok'])) {
 ?>
                   <div class="alert alert-success" role="alert">
-                    Registered. Thank you.
+                    Oled registreeritud. Täname!.
                   </div>
 <?php
   } else if (isset($_SESSION['error-message'])) {
@@ -82,8 +82,8 @@
   } else {
 ?>
               <p>
-                Please register yourself below to claim the points.
-                The score table will be updated once the task deadline has passed.
+				Registreeri ennast allpool olevas vormis selleks, et kodutöö ülesande punkte saada.
+				Tulemus ilmub tulemuste tabelisse pärast seda kui kodutöö tähtaeg on möödunud.
               </p>
 <?php
     if (isset($_SESSION['submit-message'])) {
@@ -98,18 +98,18 @@
               <form action="#" method="post">
                   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                       <input class="mdl-textfield__input" type="text" id="Name" name="Name">
-                      <label class="mdl-textfield__label" for="Name">Full name...</label>
+                      <label class="mdl-textfield__label" for="Name">Täisnimi...</label>
                   </div>
                   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                       <input class="mdl-textfield__input" type="text" id="StudentID" name="StudentID">
-                      <label class="mdl-textfield__label" for="StudentID">Student ID... (e.g. A12345)</label>
+                      <label class="mdl-textfield__label" for="StudentID">Matriklinumber...</label>
                   </div>
                   <div class="alert alert-warning" role="alert">
-                    Warning! In real life, never submit identifying data in Tor.
+					Hoiatus! Päriselt Tor kasutades ei tohiks sisestada enda identiteedile viitavat infot. Praegu on tegu kodutöö käigus tehtava erandiga.
                   </div>
                   <p>
                       <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" name="submit">
-                          Submit
+                          Sisesta andmed
                       </button>
                   </p>
               </form>
