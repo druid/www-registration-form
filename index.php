@@ -40,7 +40,7 @@
           <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
             <h3>Tor varjatud teenus</h3>
               <p>
-                Tere! Oled leidnud infoturbe kursuse raames loodud Tor varjatud teenuse.                
+                Tere! Oled leidnud Infoturbe kursuse raames loodud Tor varjatud teenuse.
               </p>
 <?php
   session_start();
@@ -69,7 +69,7 @@
   if (isset($_SESSION['ok'])) {
 ?>
                   <div class="alert alert-success" role="alert">
-                    Oled registreeritud. Täname!.
+                    Oled registreeritud. Täname!
                   </div>
 <?php
   } else if (isset($_SESSION['error-message'])) {
